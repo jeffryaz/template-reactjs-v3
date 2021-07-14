@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -45,6 +45,43 @@ function Login(props) {
         })
       ),
   });
+
+  useEffect(() => {
+    // if (window.navigator.geolocation) {
+    //   window.navigator.geolocation.getCurrentPosition(showPosition, showError, {
+    //     enableHighAccuracy: true,
+    //     timeout: 5000,
+    //     maximumAge: 0,
+    //   });
+    // } else {
+    //   console.log("Geolocation is not supported by this browser.");
+    // }
+  });
+
+  // const showPosition = (position) => {
+  //   console.log(
+  //     "Latitude: " +
+  //       position.coords.latitude +
+  //       "<br>Longitude: " +
+  //       position.coords.longitude
+  //   );
+  // };
+  // const showError = (error) => {
+  //   switch (error.code) {
+  //     case error.PERMISSION_DENIED:
+  //       console.log("User denied the request for Geolocation.");
+  //       break;
+  //     case error.POSITION_UNAVAILABLE:
+  //       console.log("Location information is unavailable.");
+  //       break;
+  //     case error.TIMEOUT:
+  //       console.log("The request to get user location timed out.");
+  //       break;
+  //     case error.UNKNOWN_ERROR:
+  //       console.log("An unknown error occurred.");
+  //       break;
+  //   }
+  // };
 
   const enableLoading = () => {
     setLoading(true);
